@@ -42,6 +42,23 @@
             <groupId>name.falgout.jeffrey.testing.junit5</groupId>
             <artifactId>guice-extension</artifactId>
         </dependency>
+        <!--retrofit2-->
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-gson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-scalars</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.oltu.oauth2</groupId>
+            <artifactId>org.apache.oltu.oauth2.client</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -52,6 +69,7 @@
                 <version>4.2.3</version>
                 <executions>
                     <execution>
+                        <id>rest-assured</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
@@ -64,13 +82,36 @@
                             </configOptions>
                             <library>rest-assured</library>
                             <skipValidateSpec>true</skipValidateSpec>
-                            <skipIfSpecIsUnchanged>true</skipIfSpecIsUnchanged>
+                            <skipIfSpecIsUnchanged>false</skipIfSpecIsUnchanged>
                             <generateApiDocumentation>false</generateApiDocumentation>
                             <generateModelDocumentation>false</generateModelDocumentation>
-                            <apiPackage>${default.package}.api</apiPackage>
-                            <modelPackage>${default.package}.model</modelPackage>
-                            <invokerPackage>${default.package}</invokerPackage>
+                            <apiPackage>${default.package}.v1.api</apiPackage>
+                            <modelPackage>${default.package}.v1.model</modelPackage>
+                            <invokerPackage>${default.package}.v1</invokerPackage>
                             <templateDirectory>${project.basedir}/src/main/resources/tеmplates</templateDirectory>
+                        </configuration>
+                    </execution>
+<!--                    retro client example-->
+                    <execution>
+                        <id>retrofit</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/swagger.json</inputSpec>
+                            <output>${project.build.directory}/generated-sources/openapi-generator</output>
+                            <generatorName>java</generatorName>
+                            <configOptions>
+                                <dateLibrary>java8</dateLibrary>
+                            </configOptions>
+                            <library>retrofit2</library>
+                            <skipValidateSpec>true</skipValidateSpec>
+                            <skipIfSpecIsUnchanged>false</skipIfSpecIsUnchanged>
+                            <generateApiDocumentation>false</generateApiDocumentation>
+                            <generateModelDocumentation>false</generateModelDocumentation>
+                            <apiPackage>${default.package}.v2.api</apiPackage>
+                            <modelPackage>${default.package}.v2.model</modelPackage>
+                            <invokerPackage>${default.package}.v2</invokerPackage>
                         </configuration>
                     </execution>
                 </executions>

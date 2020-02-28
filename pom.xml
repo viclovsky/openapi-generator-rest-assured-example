@@ -32,6 +32,10 @@
         <junit.version>4.12</junit.version>
         <!--surefire plugin-->
         <thread.count>1</thread.count>
+        <!--retrofit2-->
+        <okhttp-version>2.7.5</okhttp-version>
+        <retrofit-version>2.3.0</retrofit-version>
+        <oltu-version>1.0.1</oltu-version>
     </properties>
 
     <build>
@@ -139,6 +143,44 @@
                 <artifactId>guice-extension</artifactId>
                 <version>1.0.0</version>
             </dependency>
+            <!--retrofit2-->
+            <dependency>
+                <groupId>com.squareup.okio</groupId>
+                <artifactId>okio</artifactId>
+                <version>${okio-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-gson</artifactId>
+                <version>${retrofit-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>retrofit</artifactId>
+                <version>${retrofit-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-scalars</artifactId>
+                <version>${retrofit-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-simplexml</artifactId>
+                <version>${retrofit-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.oltu.oauth2</groupId>
+                <artifactId>org.apache.oltu.oauth2.client</artifactId>
+                <version>${oltu-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.oltu.oauth2</groupId>
+                        <artifactId>common</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

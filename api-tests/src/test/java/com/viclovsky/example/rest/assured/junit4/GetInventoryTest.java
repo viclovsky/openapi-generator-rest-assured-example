@@ -1,6 +1,6 @@
-package com.viclovsky.example.junit4;
+package com.viclovsky.example.rest.assured.junit4;
 
-import com.viclovsky.example.swagger.client.ApiClient;
+import com.viclovsky.example.swagger.client.v1.ApiClient;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.ErrorLoggingFilter;
 import org.junit.Before;
@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import java.util.Map;
 
-import static com.viclovsky.example.swagger.client.GsonObjectMapper.gson;
-import static com.viclovsky.example.swagger.client.ResponseSpecBuilders.shouldBeCode;
-import static com.viclovsky.example.swagger.client.ResponseSpecBuilders.validatedWith;
+import static com.viclovsky.example.swagger.client.v1.GsonObjectMapper.gson;
+import static com.viclovsky.example.swagger.client.v1.ResponseSpecBuilders.shouldBeCode;
+import static com.viclovsky.example.swagger.client.v1.ResponseSpecBuilders.validatedWith;
 import static io.restassured.config.ObjectMapperConfig.objectMapperConfig;
 import static io.restassured.config.RestAssuredConfig.config;
 import static org.apache.http.HttpStatus.SC_OK;
