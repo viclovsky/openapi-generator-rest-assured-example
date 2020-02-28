@@ -181,6 +181,174 @@
         ]
       }
     },
+    "/pet/search/": {
+      "get": {
+        "tags": [
+          "pet"
+        ],
+        "summary": "Search pets by ID",
+        "description": "Search pets",
+        "operationId": "getPetSearch",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Status of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "age",
+            "in": "query",
+            "description": "Age of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "breed",
+            "in": "query",
+            "description": "Breed of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "color",
+            "in": "query",
+            "description": "Color of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "owner",
+            "in": "query",
+            "description": "Owner of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sex",
+            "in": "query",
+            "description": "Sex of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Type of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "class",
+            "in": "query",
+            "description": "Class of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "school",
+            "in": "query",
+            "description": "School of pet",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "a",
+            "in": "query",
+            "description": "a",
+            "required": false,
+            "type": "bool"
+          },
+          {
+            "name": "b",
+            "in": "query",
+            "description": "b",
+            "required": false,
+            "type": "bool"
+          },
+          {
+            "name": "c",
+            "in": "query",
+            "description": "c",
+            "required": false,
+            "type": "bool"
+          },
+          {
+            "name": "d",
+            "in": "query",
+            "description": "d",
+            "required": false,
+            "type": "bool"
+          },
+          {
+            "name": "f",
+            "in": "query",
+            "description": "f",
+            "required": false,
+            "type": "bool"
+          },
+          {
+            "name": "g",
+            "in": "query",
+            "description": "g",
+            "required": false,
+            "type": "bool"
+          },
+          {
+            "name": "x-token",
+            "in": "header",
+            "description": "token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "x-exp",
+            "in": "header",
+            "description": "exp",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "x-geo",
+            "in": "header",
+            "description": "Geo header",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Pet"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Pet not found"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/pet/{petId}/uploadImage": {
       "post": {
         "tags": [

@@ -1,22 +1,22 @@
 package com.viclovsky.example.retrofit;
 
 import com.viclovsky.example.swagger.client.v2.ApiClient;
+import com.viclovsky.example.swagger.client.v2.api.PetApi;
 import com.viclovsky.example.swagger.client.v2.api.StoreApi;
 import okhttp3.OkHttpClient;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
 import java.io.IOException;
-import java.util.Map;
 
 import static org.apache.http.HttpStatus.SC_OK;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.greaterThan;
 
-public class GetInventoryTest {
+public class SearchPet {
 
     private ApiClient api;
 
@@ -31,11 +31,15 @@ public class GetInventoryTest {
         api.createService(StoreApi.class);
     }
 
+
     @Test
-    public void shouldGetInventoryTest() throws IOException {
-        StoreApi storeApi = api.createService(StoreApi.class);
-        Response<Map<String, Integer>> inventory = storeApi.getInventory().execute();
-        assertThat(inventory.code(), equalTo(SC_OK));
-        assertThat(inventory.body().keySet().size(), greaterThan(0));
+    @Ignore("Only for demonstration")
+    public void shouldSearchPet() throws IOException {
+        Response res = api.createService(PetApi.class)
+                .getPetSearch("ok", null, null, null, null,
+                        null, null, null, null, null,
+                        null, null, null, null, null, null, null,
+                        null, null).execute();
+        assertThat(res.code(), equalTo(SC_OK));
     }
 }
