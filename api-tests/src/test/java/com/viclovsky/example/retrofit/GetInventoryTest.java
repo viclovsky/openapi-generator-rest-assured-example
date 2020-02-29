@@ -26,15 +26,13 @@ public class GetInventoryTest {
         api = new ApiClient();
         Retrofit.Builder builder = new ApiClient().getAdapterBuilder()
                 .baseUrl("http://petstore.swagger.io:80/v2/");
-        api.setAdapterBuilder(builder);
-        api.configureFromOkclient(client);
-        api.createService(StoreApi.class);
+        api.setAdapterBuilder(builder).configureFromOkclient(client);
     }
 
     @Test
     public void shouldGetInventoryTest() throws IOException {
-        StoreApi storeApi = api.createService(StoreApi.class);
-        Response<Map<String, Integer>> inventory = storeApi.getInventory().execute();
+        Response<Map<String, Integer>> inventory =
+                api.createService(StoreApi.class).getInventory().execute();
         assertThat(inventory.code(), equalTo(SC_OK));
         assertThat(inventory.body().keySet().size(), greaterThan(0));
     }

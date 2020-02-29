@@ -28,7 +28,6 @@ public class SearchPet {
                 .baseUrl("http://petstore.swagger.io:80/v2/");
         api.setAdapterBuilder(builder);
         api.configureFromOkclient(client);
-        api.createService(StoreApi.class);
     }
 
 
