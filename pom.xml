@@ -36,6 +36,9 @@
         <okhttp-version>2.7.5</okhttp-version>
         <retrofit-version>2.3.0</retrofit-version>
         <oltu-version>1.0.1</oltu-version>
+        <!--assertj-core-->
+        <assertj-core>3.6.2</assertj-core>
+        <assertj-maven-plugin>2.0.0</assertj-maven-plugin>
     </properties>
 
     <build>
@@ -180,7 +183,16 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj-core}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-assertions-generator-maven-plugin</artifactId>
+                <version>${assertj-maven-plugin}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

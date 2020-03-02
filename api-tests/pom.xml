@@ -19,10 +19,36 @@
             <artifactId>api-client</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-assertions-generator-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>public-assertj</id>
+                        <goals>
+                            <goal>generate-assertions</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <packages>
+                        <param>${default.package}.v1.model</param>
+                    </packages>
+                    <hierarchical>true</hierarchical>
+                    <entryPointClassPackage>org.assertj</entryPointClassPackage>
+                    <targetDir>${project.basedir}/target/generated-sources/assertj</targetDir>
+                    <generateSoftAssertions>true</generateSoftAssertions>
+                </configuration>
+            </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>

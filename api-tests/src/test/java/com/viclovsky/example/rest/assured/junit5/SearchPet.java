@@ -11,7 +11,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.viclovsky.example.swagger.client.v1.ResponseSpecBuilders.shouldBeCode;
 import static com.viclovsky.example.swagger.client.v1.ResponseSpecBuilders.validatedWith;
-import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
 
 @ExtendWith(GuiceExtension.class)
