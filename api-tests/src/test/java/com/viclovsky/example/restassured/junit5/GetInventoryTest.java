@@ -1,4 +1,4 @@
-package com.viclovsky.example.rest.assured.junit5;
+package com.viclovsky.example.restassured.junit5;
 
 import com.google.inject.Inject;
 import com.viclovsky.example.module.ExampleApiModule;

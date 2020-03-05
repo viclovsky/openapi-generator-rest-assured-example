@@ -1,4 +1,4 @@
-package com.viclovsky.example.rest.assured.junit4;
+package com.viclovsky.example.restassured.junit4;
 
 import com.viclovsky.example.swagger.client.v1.ApiClient;
 import io.restassured.builder.RequestSpecBuilder;
