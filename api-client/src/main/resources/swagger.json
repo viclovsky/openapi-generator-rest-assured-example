@@ -199,70 +199,80 @@
             "in": "query",
             "description": "Status of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"ok\""
           },
           {
             "name": "age",
             "in": "query",
             "description": "Age of pet",
             "required": false,
-            "type": "string"
+            "type": "integer",
+            "x-example": 1
           },
           {
             "name": "breed",
             "in": "query",
             "description": "Breed of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"breed\""
           },
           {
             "name": "color",
             "in": "query",
             "description": "Color of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"red\""
           },
           {
             "name": "owner",
             "in": "query",
             "description": "Owner of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"Victor\""
           },
           {
             "name": "id",
             "in": "query",
             "description": "Id of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"pet-123\""
           },
           {
             "name": "sex",
             "in": "query",
             "description": "Sex of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"w\""
           },
           {
             "name": "type",
             "in": "query",
             "description": "Type of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"type1\""
           },
           {
             "name": "class",
             "in": "query",
             "description": "Class of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"class1\""
           },
           {
             "name": "school",
             "in": "query",
             "description": "School of pet",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "x-example": "\"393\""
           },
           {
             "name": "a",
