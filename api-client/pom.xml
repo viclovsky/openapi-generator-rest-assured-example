@@ -91,7 +91,7 @@
                             <templateDirectory>${project.basedir}/src/main/resources/tеmplates</templateDirectory>
                         </configuration>
                     </execution>
-<!--                    retro client example-->
+                    <!--retrofit client example-->
                     <execution>
                         <id>retrofit</id>
                         <goals>
@@ -112,6 +112,29 @@
                             <apiPackage>${default.package}.v2.api</apiPackage>
                             <modelPackage>${default.package}.v2.model</modelPackage>
                             <invokerPackage>${default.package}.v2</invokerPackage>
+                        </configuration>
+                    </execution>
+                    <!--retrofit bad client example-->
+                    <execution>
+                        <id>retrofit-bad</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/swagger-bad.json</inputSpec>
+                            <output>${project.build.directory}/generated-sources/openapi-generator</output>
+                            <generatorName>java</generatorName>
+                            <configOptions>
+                                <dateLibrary>java8</dateLibrary>
+                            </configOptions>
+                            <library>retrofit2</library>
+                            <skipValidateSpec>true</skipValidateSpec>
+                            <skipIfSpecIsUnchanged>false</skipIfSpecIsUnchanged>
+                            <generateApiDocumentation>false</generateApiDocumentation>
+                            <generateModelDocumentation>false</generateModelDocumentation>
+                            <apiPackage>${default.package}.v3.api</apiPackage>
+                            <modelPackage>${default.package}.v3.model</modelPackage>
+                            <invokerPackage>${default.package}.v3</invokerPackage>
                         </configuration>
                     </execution>
                 </executions>

@@ -38,7 +38,7 @@
         <oltu-version>1.0.1</oltu-version>
         <!--assertj-core-->
         <assertj-core>3.6.2</assertj-core>
-        <assertj-maven-plugin>2.0.0</assertj-maven-plugin>
+        <assertj-maven-plugin>2.1.0</assertj-maven-plugin>
     </properties>
 
     <build>
@@ -54,6 +54,15 @@
                 </configuration>
             </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.assertj</groupId>
+                    <artifactId>assertj-assertions-generator-maven-plugin</artifactId>
+                    <version>${assertj-maven-plugin}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <dependencies>
@@ -147,11 +156,6 @@
                 <version>1.0.0</version>
             </dependency>
             <!--retrofit2-->
-            <dependency>
-                <groupId>com.squareup.okio</groupId>
-                <artifactId>okio</artifactId>
-                <version>${okio-version}</version>
-            </dependency>
             <dependency>
                 <groupId>com.squareup.retrofit2</groupId>
                 <artifactId>converter-gson</artifactId>
