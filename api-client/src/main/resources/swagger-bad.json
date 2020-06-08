@@ -510,7 +510,7 @@
         ],
         "summary": "Finds Pets by status",
         "description": "Multiple status values can be provided with comma separated strings",
-        "operationId": "route_1",
+        "operationId": "route",
         "produces": [
           "application/json",
           "application/xml"
@@ -841,6 +841,7 @@
           {
             "name": "username",
             "in": "path",
+
             "description": "The name that needs to be deleted",
             "required": true,
             "type": "string"

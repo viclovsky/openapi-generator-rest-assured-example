@@ -68,6 +68,7 @@
                 <artifactId>openapi-generator-maven-plugin</artifactId>
                 <version>4.2.3</version>
                 <executions>
+                    <!--rest-assured client example-->
                     <execution>
                         <id>rest-assured</id>
                         <goals>
@@ -85,15 +86,15 @@
                             <skipIfSpecIsUnchanged>false</skipIfSpecIsUnchanged>
                             <generateApiDocumentation>false</generateApiDocumentation>
                             <generateModelDocumentation>false</generateModelDocumentation>
-                            <apiPackage>${default.package}.v1.api</apiPackage>
-                            <modelPackage>${default.package}.v1.model</modelPackage>
-                            <invokerPackage>${default.package}.v1</invokerPackage>
+                            <apiPackage>${default.package}.restassured.api</apiPackage>
+                            <modelPackage>${default.package}.restassured.model</modelPackage>
+                            <invokerPackage>${default.package}.restassured</invokerPackage>
                             <templateDirectory>${project.basedir}/src/main/resources/tеmplates</templateDirectory>
                         </configuration>
                     </execution>
-                    <!--retrofit client example-->
+                    <!--retrofit2 client example-->
                     <execution>
-                        <id>retrofit</id>
+                        <id>retrofit2</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
@@ -109,34 +110,34 @@
                             <skipIfSpecIsUnchanged>false</skipIfSpecIsUnchanged>
                             <generateApiDocumentation>false</generateApiDocumentation>
                             <generateModelDocumentation>false</generateModelDocumentation>
-                            <apiPackage>${default.package}.v2.api</apiPackage>
-                            <modelPackage>${default.package}.v2.model</modelPackage>
-                            <invokerPackage>${default.package}.v2</invokerPackage>
+                            <apiPackage>${default.package}.retrofit2.api</apiPackage>
+                            <modelPackage>${default.package}.retrofit2.model</modelPackage>
+                            <invokerPackage>${default.package}.retrofit2</invokerPackage>
                         </configuration>
                     </execution>
-                    <!--retrofit bad client example-->
-                    <execution>
-                        <id>retrofit-bad</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/swagger-bad.json</inputSpec>
-                            <output>${project.build.directory}/generated-sources/openapi-generator</output>
-                            <generatorName>java</generatorName>
-                            <configOptions>
-                                <dateLibrary>java8</dateLibrary>
-                            </configOptions>
-                            <library>retrofit2</library>
-                            <skipValidateSpec>true</skipValidateSpec>
-                            <skipIfSpecIsUnchanged>false</skipIfSpecIsUnchanged>
-                            <generateApiDocumentation>false</generateApiDocumentation>
-                            <generateModelDocumentation>false</generateModelDocumentation>
-                            <apiPackage>${default.package}.v3.api</apiPackage>
-                            <modelPackage>${default.package}.v3.model</modelPackage>
-                            <invokerPackage>${default.package}.v3</invokerPackage>
-                        </configuration>
-                    </execution>
+                    <!--retrofit2 bad client example-->
+<!--                    <execution>-->
+<!--                        <id>retrofit2-bad</id>-->
+<!--                        <goals>-->
+<!--                            <goal>generate</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <inputSpec>${project.basedir}/src/main/resources/swagger-bad.json</inputSpec>-->
+<!--                            <output>${project.build.directory}/generated-sources/openapi-generator</output>-->
+<!--                            <generatorName>java</generatorName>-->
+<!--                            <configOptions>-->
+<!--                                <dateLibrary>java8</dateLibrary>-->
+<!--                            </configOptions>-->
+<!--                            <library>retrofit2</library>-->
+<!--                            <skipValidateSpec>true</skipValidateSpec>-->
+<!--                            <skipIfSpecIsUnchanged>false</skipIfSpecIsUnchanged>-->
+<!--                            <generateApiDocumentation>false</generateApiDocumentation>-->
+<!--                            <generateModelDocumentation>false</generateModelDocumentation>-->
+<!--                            <apiPackage>${default.package}.v3.api</apiPackage>-->
+<!--                            <modelPackage>${default.package}.v3.model</modelPackage>-->
+<!--                            <invokerPackage>${default.package}.v3</invokerPackage>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
                 </executions>
             </plugin>
         </plugins>

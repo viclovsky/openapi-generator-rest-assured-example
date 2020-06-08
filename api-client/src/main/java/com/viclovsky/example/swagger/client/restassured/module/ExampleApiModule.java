@@ -1,8 +1,8 @@
-package com.viclovsky.example.module;
+package com.viclovsky.example.swagger.client.restassured.module;
 
 import com.google.inject.AbstractModule;
-import com.viclovsky.example.provider.ExampleApiProvider;
-import com.viclovsky.example.swagger.client.v1.ApiClient;
+import com.viclovsky.example.swagger.client.restassured.provider.ExampleApiProvider;
+import com.viclovsky.example.swagger.client.restassured.ApiClient;
 
 public class ExampleApiModule extends AbstractModule {
 

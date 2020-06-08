@@ -1,17 +1,17 @@
-package com.viclovsky.example.restassured.junit5;
+package com.viclovsky.example.swagger.client.restassured.junit5;
 
 import com.google.inject.Inject;
-import com.viclovsky.example.module.ExampleApiModule;
-import com.viclovsky.example.swagger.client.v1.ApiClient;
-import com.viclovsky.example.swagger.client.v1.model.ModelApiResponse;
-import com.viclovsky.example.swagger.client.v1.model.Pet;
+import com.viclovsky.example.swagger.client.restassured.module.ExampleApiModule;
+import com.viclovsky.example.swagger.client.restassured.ApiClient;
+import com.viclovsky.example.swagger.client.restassured.model.ModelApiResponse;
+import com.viclovsky.example.swagger.client.restassured.model.Pet;
 import name.falgout.jeffrey.testing.junit5.GuiceExtension;
 import name.falgout.jeffrey.testing.junit5.IncludeModule;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import static com.viclovsky.example.swagger.client.v1.ResponseSpecBuilders.shouldBeCode;
-import static com.viclovsky.example.swagger.client.v1.ResponseSpecBuilders.validatedWith;
+import static com.viclovsky.example.swagger.client.restassured.ResponseSpecBuilders.shouldBeCode;
+import static com.viclovsky.example.swagger.client.restassured.ResponseSpecBuilders.validatedWith;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.CoreMatchers.equalTo;
