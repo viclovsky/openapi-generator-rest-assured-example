@@ -1,7 +1,7 @@
 # openapi-generator-rest-assured
 
 ## Quick Start
-* Add maven plugin with latest version into pom.xml. Don't forget <inputSpec> in configuration tag with OAS specification:
+* Add maven plugin with latest version into pom.xml. Don't forget <inputSpec> configuration tag with OAS specification:
 ```xml
  <plugin>
       <groupId>org.openapitools</groupId>
@@ -81,7 +81,7 @@ See [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-gen
 
 * Run ```mvn clean compile``` for generation of API client(s) and tests
 
-* As soon as generated code has been placed in target (```/openapi-generator-rest-assured/api-client/target/generated-sources/openapi-generator/src/main```), you can use it to write your tests. Moreover 'templates' for tests will be generated (```/openapi-generator-rest-assured/api-client/target/generated-sources/openapi-generator/src/test```).
+* As soon as generated code has been placed in target (```/openapi-generator-rest-assured/api-client/target/generated-sources/openapi-generator/src/main```), you can use it for writing your tests. Moreover tests will be generated (```/openapi-generator-rest-assured/api-client/target/generated-sources/openapi-generator/src/test```).
 
 * The simplest test with junit4 looks like below (see [GetInventoryTest](https://github.com/viclovsky/openapi-generator-rest-assured/blob/master/api-tests/src/test/java/com/viclovsky/example/oas/client/restassured/junit4/GetInventoryTest.java))
 
