@@ -40,14 +40,14 @@ See [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-gen
 * Add necessary dependencies for API client:
 ```xml
      <dependency>
-         <groupId>io.</groupId>
-         <artifactId>-annotations</artifactId>
-         <version>${-core-version}</version>
+         <groupId>io.swagger</groupId>
+         <artifactId>swagger-annotations</artifactId>
+         <version>${swagger-core-version}</version>
      </dependency>
      <dependency>
          <groupId>io.rest-assured</groupId>
          <artifactId>rest-assured</artifactId>
-         <version>${rest-assured.version}</version>
+         <version>${rest-assured-version}</version>
      </dependency>
      <dependency>
          <groupId>com.google.code.gson</groupId>
@@ -67,7 +67,7 @@ See [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-gen
      <dependency>
          <groupId>com.google.code.findbugs</groupId>
          <artifactId>jsr305</artifactId>
-         <version>${jsr305}</version>
+         <version>${jsr305-version}</version>
      </dependency>
 ```
 * Add necessary dependencies for 'templates' for tests:
