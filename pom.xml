@@ -34,7 +34,7 @@
         <thread.count>1</thread.count>
         <!--retrofit2-->
         <okhttp-version>2.7.5</okhttp-version>
-        <retrofit-version>2.3.0</retrofit-version>
+        <retrofit-version>2.9.0</retrofit-version>
         <oltu-version>1.0.1</oltu-version>
         <!--assertj-core-->
         <assertj-core>3.6.2</assertj-core>
