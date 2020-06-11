@@ -75,7 +75,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/swagger.json</inputSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/oas.json</inputSpec>
                             <output>${project.build.directory}/generated-sources/openapi-generator</output>
                             <generatorName>java</generatorName>
                             <configOptions>
@@ -99,7 +99,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/swagger.json</inputSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/oas.json</inputSpec>
                             <output>${project.build.directory}/generated-sources/openapi-generator</output>
                             <generatorName>java</generatorName>
                             <configOptions>
@@ -122,7 +122,7 @@
 <!--                            <goal>generate</goal>-->
 <!--                        </goals>-->
 <!--                        <configuration>-->
-<!--                            <inputSpec>${project.basedir}/src/main/resources/swagger-bad.json</inputSpec>-->
+<!--                            <inputSpec>${project.basedir}/src/main/resources/oas-bad.json</inputSpec>-->
 <!--                            <output>${project.build.directory}/generated-sources/openapi-generator</output>-->
 <!--                            <generatorName>java</generatorName>-->
 <!--                            <configOptions>-->

@@ -1,7 +1,7 @@
-package com.viclovsky.example.swagger.client.retrofit;
+package com.viclovsky.example.oas.client.retrofit;
 
-import com.viclovsky.example.swagger.client.retrofit2.ApiClient;
-import com.viclovsky.example.swagger.client.retrofit2.api.StoreApi;
+import com.viclovsky.example.oas.client.retrofit2.ApiClient;
+import com.viclovsky.example.oas.client.retrofit2.api.StoreApi;
 import okhttp3.OkHttpClient;
 import org.junit.Before;
 import org.junit.Test;

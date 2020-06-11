@@ -1,8 +1,7 @@
-package com.viclovsky.example.swagger.client.restassured.junit4;
+package com.viclovsky.example.oas.client.restassured.junit4;
 
-import com.viclovsky.example.swagger.client.restassured.ApiClient;
-import com.viclovsky.example.swagger.client.restassured.GsonObjectMapper;
-import com.viclovsky.example.swagger.client.restassured.ResponseSpecBuilders;
+import com.viclovsky.example.oas.client.restassured.ApiClient;
+import com.viclovsky.example.oas.client.restassured.GsonObjectMapper;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.ErrorLoggingFilter;
 import org.junit.Before;
@@ -10,7 +9,8 @@ import org.junit.Test;
 
 import java.util.Map;
 
-import static com.viclovsky.example.swagger.client.restassured.ResponseSpecBuilders.validatedWith;
+import static com.viclovsky.example.oas.client.restassured.ResponseSpecBuilders.shouldBeCode;
+import static com.viclovsky.example.oas.client.restassured.ResponseSpecBuilders.validatedWith;
 import static io.restassured.config.ObjectMapperConfig.objectMapperConfig;
 import static io.restassured.config.RestAssuredConfig.config;
 import static org.apache.http.HttpStatus.SC_OK;
@@ -34,7 +34,7 @@ public class GetInventoryTest {
 
     @Test
     public void shouldGetInventoryTest() {
-        Map<String, Integer> inventory = api.store().getInventory().executeAs(ResponseSpecBuilders.validatedWith(ResponseSpecBuilders.shouldBeCode(SC_OK)));
+        Map<String, Integer> inventory = api.store().getInventory().executeAs(validatedWith(shouldBeCode(SC_OK)));
         assertThat(inventory.keySet().size(), greaterThan(0));
     }
 
