@@ -29,7 +29,7 @@
         <junit.vintage.version>5.1.0</junit.vintage.version>
         <junit.platform.version>1.1.0</junit.platform.version>
         <!--junit4-->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <!--surefire plugin-->
         <thread.count>1</thread.count>
         <!--retrofit2-->
